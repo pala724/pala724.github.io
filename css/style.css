@@ -30,7 +30,7 @@ ul {
 
 li {
     float: left;
-    width: 33.33%;
+    width: 25%;
     
 }
 
@@ -88,4 +88,15 @@ tr {
 }
 tr:nth-child(even) {
     background-color: rgb(163, 140, 75);
+}
+.oeders{
+    margin: 2rem;
+    padding: 2rem;
+}
+#ordersmain{
+    width: 40%;
+    margin:0 30%;
+    border: solid 2px brown;
+    border-radius: 2rem;
+    padding: 2rem;
 }
