@@ -9,17 +9,52 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Order form</title>
 </head>
-<div>
-    <ul>
-        <li><a href="/index.html"> Elérhetőségünk</a></li>
-        <li><a href="/discounts.html">Akcióink</a></li>
-        <li><a href="/menu.html">Étlap</a></li>
-        <li><a href="/order-form.html">Rendelés</a></li>
-    </ul>
-</div>
-<h1>Rendelés</h1>
+<body onload="weatherStatMax(), weatherStatMin(), weatherStatAvg()">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <select name="days" id="days" class="form-select">
+                    <option selected value="-1">Válassz napot</option>
+                    <option value="0">Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    <option value="5">Szombat</option>
+                    <option value="6">Vasárnap</option>
+                </select>
+            </div>
+            <div class="col-sm-1">
+                <button onclick="weather()" type="button" class="btn btn-warning">Mutat</button>
+            </div>
+            <div class="col-sm">
+                <span id="showWeather"></span>
+                <span id="showOffer"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <span id="max"></span>
+            </div>
+            <div class="col-sm">
+                <span id="min"></span>
+            </div>
+            <div class="col-sm">
+                <span id="avg"></span>
+            </div>
+        </div>
+                
+    </div>
+    <div>
+        <ul>
+            <li><a href="/index.html"> Elérhetőségünk</a></li>
+            <li><a href="/discounts.html">Akcióink</a></li>
+            <li><a href="/menu.html">Étlap</a></li>
+            <li><a href="order-form.html">Rendelés</a></li>
+        </ul>
+    </div>
+    <h1>Rendelés</h1>
 
-<body>
     <div class="orders">
         <form id="ordersmain">
             <div class="mb-3">
@@ -84,7 +119,7 @@
             <div class="mb-3">
                 *Ár: <span class="show-amount">0</span>Ft
             </div>
-            <button onclick="calcAmount()" type="button" class="btn btn-primary">Rendelés leadása</button>
+            <button onclick="validateInput()" type="button" class="btn btn-primary">Rendelés leadása</button>
 
         </form>
         <p>*Az 5000Ft-ot meg nem haladó rendeléseknél 500Ft szállítási díjat számítunk fel.</p>
